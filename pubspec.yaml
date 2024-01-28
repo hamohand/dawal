@@ -1,0 +1,67 @@
+name: dawal
+description: "Transcription Amazigh (berbère), utilisant les caractères latins."
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+#
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.3 <4.0.0'
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.2
+  # Liens
+  url_launcher: ^6.2.4
+  # json
+  json_annotation: ^4.8.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+ ######## fait le 20240123 ############
+  flutter_launcher_icons: ^0.13.1
+  # Audio
+  just_audio: ^0.9.36
+
+  http: ^1.2.0
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. 
+  flutter_lints: ^3.0.1
+# json
+  build_runner: ^2.4.8
+  json_serializable: ^6.7.1
+
+flutter:
+
+  uses-material-design: true
+
+  ######## fait le 20240123 ############
+  fonts:
+    - family: Amazigh tms
+      fonts:
+        - asset: assets/fonts/MZTIMENR.TTF
+    - family: Amazigh arial bold
+      fonts:
+        - asset: assets/fonts/MZARIALB.TTF
+#
+  assets:
+    - assets/images/
+    - assets/images/lettres/
+    - assets/audio_lettres/
+    - assets/audio_exemples/
+    - assets/json/lettres.json
+#####################################
+  # 
