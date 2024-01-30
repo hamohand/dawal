@@ -11,10 +11,10 @@ class SonLettre extends StatefulWidget {
       required this.fichier,
       required this.couleurFond});
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  MyHomePageState createState() => MyHomePageState();
 }
 
-class _MyHomePageState extends State<SonLettre> {
+class MyHomePageState extends State<SonLettre> {
   late AudioPlayer player;
 
   @override

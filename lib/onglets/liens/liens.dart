@@ -3,8 +3,6 @@
 import 'package:flutter/material.dart';
 
 import 'lien_navigateur.dart';
-//import 'package:flutter_html/flutter_html.dart';
-//import 'package:simple_html_css/simple_html_css.dart';
 
 class Liens extends StatelessWidget {
   const Liens({super.key});
@@ -38,18 +36,26 @@ Widget widgetWeb(context) {
           style: Theme.of(context).textTheme.displaySmall,
           //style: Theme.of(context).textTheme.bodyText1,
         )),
-    const LienNavigateur(
+    LienNavigateur(
         lien: 'Dictionnaire DALLET',
-        url:
-            'https://adrar-inu.blogspot.com/2020/11/tasenfelt-tamaynut-n-umawal-n-dallet.html?fbclid=IwAR2Be9alShzhOfQpKKoGnZTrNiqO9HBxSnJVISsqnwlfvSvdHQKyXG7OfEs#more'),
-    const LienNavigateur(
-        lien: 'Adrar inu', url: 'https://adrar-inu.blogspot.com/'),
-    const LienNavigateur(
+        uri: Uri(
+            scheme: 'https',
+            host: 'adrar-inu.blogspot.com',
+            path:
+                '2020/11/tasenfelt-tamaynut-n-umawal-n-dallet.html?fbclid=IwAR2Be9alShzhOfQpKKoGnZTrNiqO9HBxSnJVISsqnwlfvSvdHQKyXG7OfEs#more')),
+    //'https://adrar-inu.blogspot.com/2020/11/tasenfelt-tamaynut-n-umawal-n-dallet.html?fbclid=IwAR2Be9alShzhOfQpKKoGnZTrNiqO9HBxSnJVISsqnwlfvSvdHQKyXG7OfEs#more'),
+    LienNavigateur(
+        lien: 'Adrar inu',
+        uri: Uri(scheme: 'https', host: 'adrar-inu.blogspot.com')),
+    LienNavigateur(
         lien: 'Centre de Recherche Berbère Paris',
-        url:
-            'https://www.centrederechercheberbere.fr/transcription-kabyle.html'),
-    const LienNavigateur(
-        lien: 'Le verbe kabyle', url: 'https://www.amyag.com/'),
+        uri: Uri(
+            scheme: 'https',
+            host: 'www.centrederechercheberbere.fr',
+            path: 'transcription-kabyle.html')),
+    LienNavigateur(
+        lien: 'Le verbe kabyle',
+        uri: Uri(scheme: 'https', host: 'www.amyag.com')),
     const ListTile(title: Text(' ...')),
   ];
   return Column(children: tab);

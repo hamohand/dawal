@@ -41,7 +41,7 @@ Widget tabPrononciations(
     lettreDef,
     couleurFond,
     int? index,
-    double? zoom) {
+    double zoom) {
   // éléments du tableau des prononciations s'il y a lieu
   return Row(
     children: [
@@ -68,7 +68,7 @@ Widget tabPrononciations(
 
 /* */
 Widget afficheExemple(BuildContext context, String? texteExemple,
-    TextStyle? styleTexteTheme, double? zoom) {
+    TextStyle? styleTexteTheme, double zoom) {
   return Container(
     decoration: const BoxDecoration(
       color: Colors.transparent,
@@ -79,7 +79,8 @@ Widget afficheExemple(BuildContext context, String? texteExemple,
     child: Text(
       '$texteExemple',
       style: styleTexteTheme, //Theme.of(context).textTheme.bodyText1,
-      textScaleFactor: zoom,
+      //textScaleFactor: zoom,
+      textScaler: TextScaler.linear(zoom),
     ),
   );
 }

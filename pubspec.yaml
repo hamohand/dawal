@@ -26,14 +26,15 @@ dependencies:
   url_launcher: ^6.2.4
   # json
   json_annotation: ^4.8.1
+  # Audio
+  just_audio: ^0.9.36
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
  ######## fait le 20240123 ############
   flutter_launcher_icons: ^0.13.1
-  # Audio
-  just_audio: ^0.9.36
+  
 
   http: ^1.2.0
 

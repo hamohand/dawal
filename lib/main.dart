@@ -129,6 +129,6 @@ List<Lettre>? convertir(String responseBody) {
   //print('main: parsed= $parsed');
   final parsedTab =
       parsed.map<Lettre>((json) => Lettre.fromJson(json)).toList();
-  print('main: parsedTab= ${parsedTab[0].prononciations[0].exemple}');
+  //print('main: parsedTab= ${parsedTab[0].prononciations[0].exemple}');
   return parsedTab;
 }

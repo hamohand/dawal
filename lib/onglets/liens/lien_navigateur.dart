@@ -7,25 +7,32 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-//import 'package:url_launcher/link.dart';
+
 import 'package:url_launcher/url_launcher.dart';
 
 class LienNavigateur extends StatefulWidget {
-  final String url;
+  //final String url;
+  final Uri uri;
   final String lien;
-  const LienNavigateur({super.key, required this.url, required this.lien});
+  const LienNavigateur({super.key, required this.uri, required this.lien});
 
   @override
-  _LienNavigateurState createState() => _LienNavigateurState();
+  LienNavigateurState createState() => LienNavigateurState();
 }
 
-class _LienNavigateurState extends State<LienNavigateur> {
-  Future<void> _launchInBrowser(String url) async {
-    if (!await launch(
-      url,
+class LienNavigateurState extends State<LienNavigateur> {
+  Future<void> _launchInBrowser(Uri url) async {
+    /*if (!await launch(
+       url,
       forceSafariVC: false,
       forceWebView: false,
       headers: <String, String>{'my_header_key': 'my_header_value'},
+    )) */
+    if (!await launchUrl(
+      url,
+      //forceSafariVC: false,
+      //forceWebView: false,
+      //headers: <String, String>{'my_header_key': 'my_header_value'},
     )) {
       throw 'Could not launch $url';
     }
@@ -50,7 +57,7 @@ class _LienNavigateurState extends State<LienNavigateur> {
       alignment: Alignment.centerLeft,
       child: ElevatedButton(
         onPressed: () => setState(() {
-          _launchInBrowser(widget.url);
+          _launchInBrowser(widget.uri);
         }),
         child: Text(
           widget.lien,

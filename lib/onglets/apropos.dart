@@ -10,8 +10,8 @@ class Apropos extends StatelessWidget {
           //backgroundColor: Colors.amber.shade800,
           title: Text(
             'A propos',
-            // ignore: deprecated_member_use
-            textScaleFactor: 1,
+            //textScaleFactor: taille,
+            textScaler: const TextScaler.linear(1),
             style: Theme.of(context).textTheme.displayMedium,
           ),
         ),

@@ -45,7 +45,7 @@ Widget laListe(BuildContext context, tabLettres, zoom) {
 }
 
 /* */
-Widget afficheLettre(BuildContext context, String? lalettre, double? taille) {
+Widget afficheLettre(BuildContext context, String? lalettre, double taille) {
   return Container(
     decoration: BoxDecoration(
         color: Colors.transparent,
@@ -59,7 +59,8 @@ Widget afficheLettre(BuildContext context, String? lalettre, double? taille) {
         Text(
       '$lalettre',
       style: Theme.of(context).textTheme.bodyMedium,
-      textScaleFactor: taille,
+      //textScaleFactor: taille,
+      textScaler: TextScaler.linear(taille),
     ),
     //)
   );

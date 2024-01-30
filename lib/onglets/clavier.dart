@@ -62,11 +62,14 @@ Widget widgetWindow(context) {
           'Windows',
           style: Theme.of(context).textTheme.displaySmall,
         )),
-    const Row(children: [
+    Row(children: [
       LienNavigateur(
-          lien: 'Youtube', url: 'https://www.youtube.com/watch?v=5S2wVF-PNa8'),
+          lien: 'Youtube',
+          uri: Uri.parse('https://www.youtube.com/watch?v=5S2wVF-PNa8')),
       LienNavigateur(
-          lien: 'amawal.free.fr', url: 'http://amawal.free.fr/fontes.html'),
+          lien: 'amawal.free.fr',
+          uri:
+              Uri(scheme: 'http', host: 'amawal.free.fr', path: 'fontes.html')),
     ])
   ];
   return Column(children: tab);
